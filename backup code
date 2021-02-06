@@ -1,0 +1,42 @@
+var timeMin = 25;
+var timeSec = 0;
+var seconds = timeMin * 60;
+
+const startBut = document.getElementById("startButton");
+const pauseBut = document.getElementById("pauseButton");
+const resetBut = document.getElementById("resetButton");
+
+document.getElementById("startButton").addEventListener("click", function () {
+  timeMin = 1;
+  timeSec = 0;
+  document.getElementById("timerClock").innerHTML = timeMin;
+
+  var minTimer = setInterval(function () {
+    timeMin--;
+    document.getElementById("timerClock").innerHTML = timeMin;
+  }, 60000);
+
+ var secondTimer = setInterval(function () {
+    timeSec--;
+    if(timeSec === 00){
+       timeSec = 59;
+    };
+    document.getElementById("timerSecond").innerHTML = "::" + timeSec;
+  }, 1000);
+
+if(timeMin === 00 ){
+  clearInterval(minTimer);
+  clearInterval(secondTimer);
+};
+
+});
+
+document.getElementById("resetButton").addEventListener("click", function () {
+  timeMin = 25;
+  timeSec = 00;
+});
+
+
+//fix the negative countdown
+//fix the split seconds zero before the countdown starts
+//function of reset button

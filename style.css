@@ -1,0 +1,150 @@
+body {
+  font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timerCSS{
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding-bottom: 50px;
+  font-size: 50px;
+  color: white;
+  padding-left: 70px;
+
+}
+
+#seconds{
+  margin-left: 15px;
+}
+
+#timerClock{
+  padding-right: 70px;
+}
+
+#timerSecond{
+  padding-left: 60px;
+}
+
+.centerCode {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  flex: 50%;
+  flex-shrink: 25%;
+}
+
+#circle {
+  background: linear-gradient(
+        to right bottom, 
+        rgba(42, 91, 226, 0.8),
+        #328cdb    );
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 30px;
+}
+
+.butStyle{
+  margin-right: 2rem;
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color:aliceblue;
+    font-size: 20px;
+}
+
+#start {
+  margin-left: 450px;
+}
+
+#reset {
+  margin-right: 450px;
+}
+
+.grid-container {
+  height: 100vh;
+  background: linear-gradient(to right top, rgb(63, 13, 156), #120136);
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main-1 main-1 main-1"
+    "footer footer footer";
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-columns: 1fr;
+}
+
+.grid-item {
+  /* background: linear-gradient(to right top, #82B8D9, #6B8DF2); */
+  background: transparent;
+}
+
+.header {
+  grid-area: header;
+  /* background-color: #F5E722; */
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  /* padding-top: 20px; */
+}
+
+h1 {
+  font-family: 'Hachi Maru Pop', cursive;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+
+.main-1 {
+  grid-area: main-1;
+}
+
+.footer {
+  grid-area: footer;
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: aliceblue;
+  padding-top: 245px;
+  
+}
+
+#mintues {
+  margin-right: 170px;
+}
+
+#colon {
+  margin-right: 80px;
+}
+
+
